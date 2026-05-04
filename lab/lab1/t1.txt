@@ -1,0 +1,14 @@
+.text
+li.w $r2, 2
+li.w $r4, 0
+li.w $r3, 1
+li.w $r5, 1
+
+LOOP:
+    bge $r5, $r2, DONE
+    add.w $r6, $r3, $r4
+    addi.w $r4, $r3, 0
+    addi.w $r3, $r6, 0
+    addi.w $r5, $r5, 1
+    b LOOP
+DONE:
