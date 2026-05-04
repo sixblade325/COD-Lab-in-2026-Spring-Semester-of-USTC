@@ -1,0 +1,29 @@
+COD实验《CPU设计实战LoongArch版》使用指南.md
+COD实验《CPU设计实战LoongArch版》使用指南.pdf
+
+#ban report to protect my personal info
+*.zip
+/lab/private_report/
+
+# verilog things
+# Simulation outputs
+*.vcd
+*.fst
+*.wdb
+*.jou
+*.log
+
+# Build folders
+build/
+sim/
+output/
+
+# Vivado generated files
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+
+#bit
+bits/
