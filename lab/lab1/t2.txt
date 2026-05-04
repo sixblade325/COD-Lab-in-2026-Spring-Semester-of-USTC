@@ -1,0 +1,24 @@
+.text
+li.w r2, 6
+li.w r3, 0
+li.w r4, 1
+li.w r5, 0
+li.w r6, 0
+li.w r9, 1
+li.w r10, 0xFFFFFFFF
+
+LOOP:
+	bge r9, r2, DONE
+	addi.w r9, r9, 1
+	add.w r8, r4, r6
+	add.w r7, r3, r5
+	sub.w r11, r10, r4
+	bgeu r11, r6, SKIP
+	addi.w r7, r7, 1
+SKIP:
+	addi.w r5, r3, 0
+	addi.w r6, r4, 0
+	addi.w r3, r7, 0
+	addi.w r4, r8, 0
+	b LOOP
+DONE:
